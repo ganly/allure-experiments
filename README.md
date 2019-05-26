@@ -25,3 +25,12 @@ scripts, makefiles and ideally with the
 [entr](https://bitbucket.org/eradman/entr/src/default/)
 command.
 
+
+Hacking
+-------
+
+Run `make test` in one window, hack around in others.
+
+In a CI tool, run `make test-allure-results` to get the test data
+added to the report.
+
