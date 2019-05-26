@@ -14,6 +14,7 @@ def step_impl(context, text):
 def step_impl(context, text):
     print(text)
     retval = os.system(text)
+    raise HowToCaptureSTDOUT(u'we need to captureSTDOUT')
     print(retval)
     assert retval == 0
 
