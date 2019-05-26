@@ -10,9 +10,11 @@ def step_impl(context, text):
     assert retval == 0
 
 
-@when(u'I issue the command \'docker run blah --version')
-def step_impl(context):
-    retval = os.system("docker run blah --version")
+@when(u'I issue the command \'{text}\'')
+def step_impl(context, text):
+    print(text)
+    retval = os.system(text)
+    print(retval)
     assert retval == 0
 
 
