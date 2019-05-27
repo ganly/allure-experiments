@@ -198,3 +198,18 @@ docker run -v ${PWD}/test-run-data:/data  \
 
 ```
 
+Tried running the server with this comand:
+```
+$ docker run -p 6060:6060 -v ${PWD}/test-run-data:/data \
+              allure-cli allure serve -p 6060 -h 127.0.0.1 /data
+
+Generating report to temp directory...
+Report successfully generated to /tmp/5770158282393033763/allure-report
+Starting web server...
+2019-05-27 15:47:38.062:INFO::main: Logging initialized @5630ms to org.eclipse.jetty.util.log.StdErrLog
+Can not open browser because this capability is not supported on your platform. You can use the link below to open the report manually.
+Server started at <http://localhost:6060/>. Press <Ctrl+C> to exit
+```
+but couldn't connect from the docker host.
+Could wget from inside the container...
+
