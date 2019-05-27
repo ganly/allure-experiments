@@ -181,4 +181,25 @@ $ jq . allure-results/ee*json
 }
 ```
 
+Subsequent runs creates similar files in the results directory (though with
+different UUID's and timing information).
+
+A single run makes enough data for Allure to be able to create a report.
+
+To get our docker based allure command to read our data and create files that
+we can see:
+```
+mkdir allure-report
+
+docker run -ti \
+           -v ${PWD}/allure-results:/data  \
+           -v ${PWD}/allure-report:/report \
+  allure-cli bash
+
+docker run -v ${PWD}/test-run-data:/data  \
+           -v ${PWD}/allure-report:/allure-report \
+           allure-cli allure generate --clean /data
+
+
+```
 
