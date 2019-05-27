@@ -8,7 +8,7 @@ Feature: Allure container provides version info
 
     Scenario:
         Given a local container image called 'allure-experiments'
-	When I issue the command 'docker run allure-experiments /allure/bin/allure --version'
-	Then the result should be x.y.z
+	When I issue the command "docker run allure-experiments /allure/bin/allure --version"
+	Then the result should be "2.12.0"
 
 
