@@ -8,4 +8,4 @@ test-allure-results:
 	    -o $HOME/lib/allure-results ./features
 	
 container-image:
-	docker build -t allure-experiments .
+	docker build --tag allure-cli .
