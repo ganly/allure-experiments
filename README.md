@@ -59,6 +59,8 @@ I'm using a [Google Cloud Shell](https://cloud.google.com/shell/docs/)
 to play with this;
 as the virtual machine is ephemeral the docker images often need to be re-created.
 
+Run `make clean build` to get set up.
+
 Run `make test` in one window, hack around in others.
 
 Later, in a CI tool, run `make test-allure-results` to get the test data
