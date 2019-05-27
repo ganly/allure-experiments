@@ -125,7 +125,7 @@ $ pip install -r requirements.txt
   ...
 
 
-$ mkdir allure-results
+$ mkdir test-run-data
 $ behave -f allure_behave.formatter:AllureFormatter -o allure-results
 1 feature passed, 0 failed, 0 skipped
 1 scenario passed, 0 failed, 0 skipped
@@ -190,11 +190,6 @@ To get our docker based allure command to read our data and create files that
 we can see:
 ```
 mkdir allure-report
-
-docker run -ti \
-           -v ${PWD}/allure-results:/data  \
-           -v ${PWD}/allure-report:/report \
-  allure-cli bash
 
 docker run -v ${PWD}/test-run-data:/data  \
            -v ${PWD}/allure-report:/allure-report \
